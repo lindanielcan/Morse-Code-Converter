@@ -3,3 +3,4 @@ This program is a simple morse code converter app, the text or the morse code in
 The UI will be provided latter. <br />
 
 The site I got the api from is https://repat.github.io/morsecode-api/ <br />
+The icon picture is from www.flaticon.com and  is attributed by photo3idea_studio.
