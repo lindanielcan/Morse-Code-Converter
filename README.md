@@ -3,4 +3,7 @@ This program is a simple morse code converter app, the text or the morse code in
 Users can use the UI window to manipulate the data.<br />
 
 The site I got the api from is https://repat.github.io/morsecode-api/ <br />
-The icon picture is from www.flaticon.com and  is attributed by photo3idea_studio.
+The icon picture is from www.flaticon.com and  is attributed by photo3idea_studio.<br />
+
+In order to execute the program, you will just need to run main.py<br />
+program_demonstration.png demonstrates how the UI looks like.
