@@ -23,4 +23,3 @@ class MorseCodeData:
         }
         connection = requests.get(url=self.decode_api_end_point, params=parameters)
         return connection.text
-
