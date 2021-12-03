@@ -9,6 +9,7 @@ class UserInterface():
         """This class will be using tkinter library to create a Gui."""
         self.window = tkinter.Tk()
         self.code_converter = MorseCodeConverter()
+
         self.window.title('Morse Code Converter')
         self.window.config(bg='#96C7C1')
         self.my_canva = tkinter.Canvas(height=300, width=500, bg='#F0E9D2', highlightthickness=0)
@@ -32,10 +33,10 @@ class UserInterface():
                                                  font=('Ariel', 10, 'bold'), command=self.copy_result)
         self.copy_result_button_window = self.my_canva.create_window(212, 260, window=self.copy_result_button)
 
-        self.clear_result_button = tkinter.Button(self.window, width=15, height=1, bg='#E6DDC4',
-                                                  activebackground='#F0E9D2', text='Clear result',
-                                                  font=('Ariel', 10, 'bold'), command=self.clear_result)
-        self.clear_result_button_window = self.my_canva.create_window(360, 260, window=self.clear_result_button)
+        self.clear_button = tkinter.Button(self.window, width=15, height=1, bg='#E6DDC4',
+                                                  activebackground='#F0E9D2', text='Clear',
+                                                  font=('Ariel', 10, 'bold'), command=self.clear)
+        self.clear_result_button_window = self.my_canva.create_window(360, 260, window=self.clear_button)
 
         self.my_canva.config()
         self.my_canva.grid(padx=20, pady=20, column=0, row=0, columnspan=2)
@@ -70,7 +71,9 @@ class UserInterface():
         self.window.clipboard_clear()
         self.window.clipboard_append(self.result.get(1.0, 'end-1c'))
 
-    def clear_result(self):
+    def clear(self):
+        self.user_message.delete(0, 'end')
+        self.morse_code.delete(0, 'end')
         self.result.delete(1.0, 'end-1c')
 
     def loop(self):
