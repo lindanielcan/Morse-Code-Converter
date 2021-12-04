@@ -7,14 +7,21 @@ class MorseCodeConverter:
         self.data = MorseCodeData()
 
     def encode(self, string):
+        """
+        This functions takes in encoded data, re-structures it, and return it.
+        :param string:
+        :return:
+        """
         data = self.data.get_morse_code(string)
         code = data.split('"')[7]
         return code
 
     def decode(self, string):
+        """
+        This functions takes in decoded data, re-structures it, and return it.
+        :param string:
+        :return:
+        """
         data = self.data.get_text(string)
         text = data.strip('{}').split('"')[3]
         return text
-
-
-x = MorseCodeConverter()

@@ -11,6 +11,11 @@ class MorseCodeData:
         self.decode_api_end_point = 'http://www.morsecode-api.de/decode'
 
     def get_morse_code(self, string):
+        """
+        This function returns encoded morse code from the api.
+        :param string:
+        :return:
+        """
         parameters = {
             'string': string
         }
@@ -18,6 +23,11 @@ class MorseCodeData:
         return connection.text
 
     def get_text(self, string):
+        """
+        This function returns the decoded message from the api
+        :param string:
+        :return:
+        """
         parameters = {
             'string': string,
         }
